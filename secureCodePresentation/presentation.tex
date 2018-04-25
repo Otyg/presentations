@@ -27,6 +27,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{color}
+\usepackage{textcomp}
 
 %----------------------------------------------------------------------------------------
 %   TITLE PAGE
@@ -151,8 +152,27 @@ Cybercom Group AB \\
 \end{itemize}
 \end{frame}
 
-\section{Secure Code - Crash course}
+\section{Threat modeling - Crash course}
+\begin{frame}
+\frametitle{Threat modeling}
+\begin{itemize}
+  \item A systematic way to find and analyse possible threats to the system
+  \item Can, and should, be done on several levels (i.e. Overall architecture \textrightarrow module/class)
+  \item Several techniques exist
+\end{itemize}
+\end{frame}
 
+\begin{frame}
+\frametitle{Threat modeling - Basic steps}
+\begin{itemize}
+  \item Decompose the application/system into manageable units (from now on \textit{processes})
+  \item Focus on one process at a time
+  \item Identify the dataflows to and from the process and which resources the flows involve (e.g. a database, a web-gui, filesystem, a user)
+  
+\end{itemize}
+\end{frame}
+
+\section{Secure Code - Crash course}
 \subsection{What defines secure code?}
 \begin{frame}
 \frametitle{What defines secure code?}
@@ -165,12 +185,18 @@ Cybercom Group AB \\
   \item Defines and enforce trust boundaries
 \end{itemize}
 \end{frame}
+
+
+
+
 \subsection{Requirements, User Stories and Tasks}
 \begin{frame}
 \frametitle{Requirements, User Stories and Tasks}
+Based on threat model (and maybe experience)
 \begin{itemize}
-  \item Security specific requirements should be added if missing (e.g. all passwords must be encrypted)
-  \item Create evil user stories for relevant requirements (e.g. As a unauthorised attacker I want to login as administrator)
+  \item Security specific requirements should be added if missing (e.g. \textit{All passwords must be encrypted})
+  \item Create evil user stories (e.g. \textit{As a unauthorised attacker I want access to the user database})
+  \item Each task should be analysed for security implications and how to handle them
 \end{itemize}
 \end{frame}
 
