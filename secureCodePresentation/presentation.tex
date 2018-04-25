@@ -99,23 +99,74 @@ Cybercom Group AB \\
   \item Can contain specific guidelines of which patterns to follow
 \end{itemize}
 \end{frame}
+\begin{frame}
 \frametitle{Code Standard - From a security perspective}
 \begin{itemize}
   \item Increase the overall readability of the code
   \item Reduces complexity (if specified in the standard)
-  \item Can be used to enforce the use of specific patterns
-  \item Can be used to prohibit of certain dangerous constructs
+  \item Can be used to enforce use of specific patterns
+  \item Can be used to prohibit use of certain dangerous constructs
 \end{itemize}
 \end{frame}
-\frametitle{Code Standard - How}
+\begin{frame}
+
+\subsection{Code Review}
+\begin{frame}
+\frametitle{Code Review}
 \begin{itemize}
-  \item Decide on a standard in the team or project
-  \item Follow it strictly
-  \item Discuss and, if needed, modify it during sprint retrospective
+  \item Manual and Automatic
+  \item A second opionon on the changed code before it goes live
+  \item Make sure the changed code follow the coding standard
+  \item Spread information about what has been done in the code
+  \item Make sure the change is applicable and called for
+  \item Find bugs and problematic/unclear code
 \end{itemize}
 \end{frame}
 
-\subsection{Requirements, Tasks and User Stories}
+\subsection{Static analysis and tests}
+\begin{frame}
+\frametitle{Static analysis}
+\begin{itemize}
+  \item Should be part of automated code review
+  \item Does not test the function of the code (or if can be compiled)
+  \item Used mainly for checking compliance with code standard
+  \item Can be used to highlight some problematic code constructs, such as
+  \begin{itemize}
+    \item Calls to unsafe functions
+    \item SQL-statements with undbound variables
+    \item Possible use of unsafe input
+    \item Might find potential logical bugs
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tests}
+\begin{itemize}
+  \item Should be part of automated code review/build
+  \item Does test the function of the code
+  \item Can be seen as documentation of the code
+  \item Should be mappable against requirements and/or user stories
+  \item There is no difference between normal functional/behavioural tests and security tests!
+\end{itemize}
+\end{frame}
+
+\section{Secure Code - Crash course}
+
+\subsection{What defines secure code?}
+\begin{frame}
+\frametitle{What defines secure code?}
+\begin{itemize}
+  \item Overall low complexity
+  \item Testable
+  \item High readability (e.g. small classes, descriptive names, shallow nesting)
+  \item Handles errors gracefully (expects the unexpected)
+  \item Does not build upon assumptions about the surroundings (i.e. external interfaces)
+  \item Defines and enforce trust boundaries
+\end{itemize}
+\end{frame}
+
+\subsection{Requirements, Tasks, User Stories and Threat modeling}
 \begin{frame}
 \frametitle{Requirements, Tasks and User Stories}
 \begin{itemize}
@@ -123,34 +174,31 @@ Cybercom Group AB \\
 \end{itemize}
 \end{frame}
 
-\subsection{Code Review}
+\subsection{Secure code}
 \begin{frame}
-\frametitle{Code Review - Why}
-\begin{itemize}
-\item
-\end{itemize}
-\end{frame}
-\begin{frame}
-\frametitle{Code Review - Methods}
-\begin{itemize}
-\item
-\end{itemize}
-\end{frame}
-\begin{frame}
-\frametitle{Code Review - From a security perspective}
+\frametitle{Requirements, Tasks and User Stories}
 \begin{itemize}
 \item
 \end{itemize}
 \end{frame}
 
-\subsection{Tests}
+\subsection{Security tests}
 \begin{frame}
-\frametitle{Tests}
+\frametitle{Requirements, Tasks and User Stories}
 \begin{itemize}
 \item
 \end{itemize}
 \end{frame}
 
+\subsection{Security code review}
+\begin{frame}
+\frametitle{Requirements, Tasks and User Stories}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+
+\iffalse
 \begin{frame}
 \frametitle{Blocks of Highlighted Text}
 \begin{block}{Block 1}
@@ -203,7 +251,7 @@ This statement requires citation \cite{p1}.
 \end{thebibliography}
 }
 \end{frame}
-
+\fi
 %------------------------------------------------
 
 \begin{frame}
