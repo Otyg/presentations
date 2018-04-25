@@ -19,28 +19,29 @@
 
 \mode<presentation> {
 
-\usetheme{Madrid} %Ok
+\usetheme{Madrid}
 \usecolortheme{whale}
 }
+\usepackage[utf8]{inputenc}
 \usepackage{listings}
-\usepackage{graphicx} % Allows including images
-\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{graphicx}
+\usepackage{booktabs}
 \usepackage{color}
 
 %----------------------------------------------------------------------------------------
 %   TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Secure Coding]{Secure Coding } % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Secure Coding]{Secure Coding }
 
-\author{Martin Vesterlund} % Your name
-\institute[Cybercom] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\author{Martin Vesterlund}
+\institute[Cybercom]
 {
-Cybercom Group AB \\ % Your institution for the title page
+Cybercom Group AB \\
 \medskip
-\textit{martin.vesterlund@cybercom.com} % Your email address
+\textit{martin.vesterlund@cybercom.com}
 }
-\date{\today} % Date, can be changed to a custom date
+\date{\today}
 
 \begin{document}
 \lstset{
@@ -55,19 +56,39 @@ Cybercom Group AB \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-\frametitle{Overview} % Table of contents slide, comment this block out to remove it
-\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\frametitle{Overview}
+\tableofcontents
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 %   PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
+\section{whoami}
+\begin{frame}
+\frametitle{whoami}
+\begin{itemize}
+  \item Former BTH student - Master of science in Computer Security
+  \item Consultant at Cybercom Karlskrona
+  \begin{itemize}
+    \item Frontend developer at Försäkringskassan
+    \item Frontend developer at Ericsson
+    \item Backend developer at Ericsson (focused on integrationtests)
+    \item Development Support/QA at Telenor
+    \begin{itemize}
+      \item Test automation
+      \item Secure development
+      \item System administrator build environment
+      \item ...and a lot of other things
+    \end{itemize}
+  \end{itemize}
+  \item Certified Agile Test Driven Development
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+\section{Foundation}
+%------------------------------------------------
 
-%------------------------------------------------
-\section{Foundation} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-%------------------------------------------------
 \subsection{Code Standard}
-
 \begin{frame}
 \frametitle{Code Standard}
 \begin{itemize}
@@ -76,7 +97,6 @@ Cybercom Group AB \\ % Your institution for the title page
 \end{frame}
 
 \subsection{Requirements and Tasks}
-
 \begin{frame}
 \frametitle{Requirements and Tasks}
 \begin{itemize}
@@ -115,7 +135,7 @@ Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenati
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\begin{frame}[fragile]
 \frametitle{Code}
 \begin{example}[Code]
 \begin{lstlisting}
