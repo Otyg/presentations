@@ -259,7 +259,19 @@ Cybercom Group AB \\
       \end{itemize}
     \end{frame}
     \begin{frame}
-      \frametitle{Validate all input}
+      \frametitle{Validate all input (entered of influenced by user)}
+      \begin{block}{Make sure the input is syntactically valid}
+        Syntactical valid input is input that is in an expected format, i.e.
+        a name should not contain digits and a postal code should not contain letters.
+
+        This can be done either by whitelisting permitted formats or by blacklisting
+        forbidden formats. Whitelisting should be preferred.
+      \end{block}
+      \begin{block}{Make sure the input is semantically valid}
+        Semantical validity means that the input make sense in it's context. In some
+        cases this is easy, such as postal codes which can be looked up, and in other
+        cases it's really hard.
+      \end{block}
     \end{frame}
     \begin{frame}
       \frametitle{Encode data}
