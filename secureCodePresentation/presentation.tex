@@ -207,45 +207,61 @@ Cybercom Group AB \\
     \end{frame}
 
 \section{Secure Code - Crash course}
-  \subsection{What defines secure code?}
+  \subsection{What defines secure code?} %Remove or move?
     \begin{frame}
-    \frametitle{What defines secure code?}
-    \begin{itemize}
-      \item Overall low complexity
-      \item Testable
-      \item High readability (e.g. small classes, descriptive names, shallow nesting)
-      \item Handles errors gracefully (expects the unexpected)
-      \item Does not build upon assumptions about the surroundings (i.e. external interfaces)
-      \item Defines and enforce trust boundaries
-    \end{itemize}
+      \frametitle{What defines secure code?}
+      \begin{itemize}
+        \item Overall low complexity
+        \item Testable
+        \item High readability (e.g. small classes, descriptive names, shallow nesting)
+        \item Handles errors gracefully (expects the unexpected)
+        \item Does not build upon assumptions about the surroundings (i.e. external interfaces)
+        \item Defines and enforce trust boundaries
+      \end{itemize}
     \end{frame}
 
   \subsection{Requirements, User Stories and Tasks}
     \begin{frame}
-    \frametitle{Requirements, User Stories and Tasks}
-    Based on threat model (and maybe experience)
-    \begin{itemize}
-      \item Security specific requirements should be added if missing (e.g. \textit{All passwords must be encrypted})
-      \item Create evil user stories (e.g. \textit{As a unauthorised attacker I want access to the user database})
-      \item Each task should be analysed for potential threats and how to mitigate them
-    \end{itemize}
-    \begin{block}{It's hard to patch security in}
-      When security countermeasures are added as a reaction, there is a risk that the patch itself introduces new threats.
-      Therefore it is vital to think about potential threats and how to mitigate them as early as possible.
-    \end{block}
+      \frametitle{Requirements, User Stories and Tasks}
+      Based on threat model (and maybe experience)
+      \begin{itemize}
+        \item Security specific requirements should be added if missing (e.g. \textit{All passwords must be encrypted})
+        \item Create evil user stories (e.g. \textit{As a unauthorised attacker I want access to the user database})
+        \item Each task should be analysed for potential threats and how to mitigate them
+      \end{itemize}
+      \begin{block}{It's hard to patch security in}
+        When security countermeasures are added as a reaction, there is a risk that the patch itself introduces new vulnerabilities.
+        Therefore it is vital to think about potential threats and how to mitigate them as early as possible.
+      \end{block}
     \end{frame}
 
   \subsection{Secure code}
     \begin{frame}
-    \frametitle{Secure code}
-    \begin{itemize}
-    \item
-    \end{itemize}
+      \frametitle{Secure code - Core}
+      \begin{itemize}
+        \item Complexity is the enemy of security
+        \item Readable code is less likely to hide surprises
+        \item Assumptions can lead to bad things
+        \item Don't reinvent the wheel
+        \item Test early, test often
+      \end{itemize}
+    \end{frame}
+    \begin{frame}
+      \frametitle{Secure code - Core, cont.}
+      \begin{itemize}
+        \item Validate all input
+        \item Encode data
+        \item Use bound parameters in queries
+        \item Handle errors and exceptions
+        \item Log wisely
+        \item Control access
+        \item Protect data
+      \end{itemize}
     \end{frame}
 
-  \subsection{Security tests}
+  \subsection{Tests}
     \begin{frame}
-    \frametitle{Security tests}
+    \frametitle{Tests}
     \begin{itemize}
     \item
     \end{itemize}
@@ -253,15 +269,15 @@ Cybercom Group AB \\
 
   \subsection{Static analysis}
     \begin{frame}
-    \frametitle{Security tests}
+    \frametitle{Static analysis}
     \begin{itemize}
     \item
     \end{itemize}
     \end{frame}
 
-  \subsection{Security code review}
+  \subsection{Code review}
     \begin{frame}
-    \frametitle{Security code review}
+    \frametitle{Code review}
     \begin{itemize}
     \item
     \end{itemize}
