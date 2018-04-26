@@ -76,83 +76,96 @@ Cybercom Group AB \\
       \item Backend developer at Ericsson (focused on integrationtests)
       \item Development Support/QA at Telenor
       \begin{itemize}
+        \item CI/CD automation
         \item Test automation
         \item Secure development
         \item System administrator build environment
         \item ...and a lot of other things
       \end{itemize}
     \end{itemize}
-    \item Certified Agile Test Driven Development
+    \item Certified Agile Test Driven Developer
   \end{itemize}
 \end{frame}
-
+%------------------------------------------------------------------------------
+% One slide
+%------------------------------------------------------------------------------
 \section{Foundation}
-  \subsection{Code Standard}
-    \begin{frame}
-      \frametitle{Code Standard}
-      \begin{itemize}
-        \item Set of guidelines, or rules, about how the code shall be written
-        \item General formatting rules, such as indentation style, line length and such
-        \item Naming of variables, constants, functions, classes ...
-        \item How to organize the code on various levels
-        \item Can contain specific guidelines of which patterns to follow
-      \end{itemize}
-    \end{frame}
+\begin{frame}
+  \frametitle{Foundation}
+  Stuff that helps if they are in use
+  \begin{itemize}
+    \item Established code standard
+    \item Code review process
+    \item Static code analysis (Automated)
+    \item Tests on various levels (Automated)
+  \end{itemize}
+\end{frame}
+%  \subsection{Code Standard}
+%    \begin{frame}
+%      \frametitle{Code Standard}
+%      \begin{itemize}
+%        \item Set of guidelines, or rules, about how the code shall be written
+%        \item General formatting rules, such as indentation style, line length and such
+%        \item Naming of variables, constants, functions, classes ...
+%        \item How to organize the code on various levels
+%        \item Can contain specific guidelines of which patterns to follow
+%      \end{itemize}
+%    \end{frame}
 
-    \begin{frame}
-      \frametitle{Code Standard - From a security perspective}
-      \begin{itemize}
-        \item Increase the overall readability of the code
-        \item Reduces complexity (if specified in the standard)
-        \item Can be used to enforce use of specific patterns
-        \item Can be used to prohibit use of certain dangerous constructs
-      \end{itemize}
-    \end{frame}
+%    \begin{frame}
+%      \frametitle{Code Standard - From a security perspective}
+%      \begin{itemize}
+%        \item Increase the overall readability of the code
+%        \item Reduces complexity (if specified in the standard)
+%        \item Can be used to enforce use of specific patterns
+%        \item Can be used to prohibit use of certain dangerous constructs
+%      \end{itemize}
+%    \end{frame}
 
-    \subsection{Code Review}
-    \begin{frame}
-      \frametitle{Code Review}
-      \begin{itemize}
-        \item Manual and Automatic
-        \item A second opionon on the changed code before it goes live
-        \item Make sure the changed code follow the coding standard
-        \item Spread information about what has been done in the code
-        \item Make sure the change is applicable and called for
-        \item Find bugs and problematic/unclear code
-      \end{itemize}
-    \end{frame}
+%    \subsection{Code Review}
+%    \begin{frame}
+%      \frametitle{Code Review}
+%      \begin{itemize}
+%        \item Manual and Automatic
+%        \item A second opionon on the changed code before it goes live
+%        \item Make sure the changed code follow the coding standard
+%        \item Spread information about what has been done in the code
+%        \item Make sure the change is applicable and called for
+%        \item Find bugs and problematic/unclear code
+%      \end{itemize}
+%    \end{frame}
 
-  \subsection{Static analysis and tests}
-    \begin{frame}
-      \frametitle{Static analysis}
-      \begin{itemize}
-        \item Should be part of automated code review
-        \item Does not test the function of the code (or if can be compiled)
-        \item Used mainly for checking compliance with code standard
-        \item Can be used to highlight some problematic code constructs, such as
-        \begin{itemize}
-          \item Calls to unsafe functions
-          \item SQL-statements with undbound variables
-          \item Possible use of unsafe input
-          \item Might find potential logical bugs
-        \end{itemize}
-      \end{itemize}
-    \end{frame}
+%  \subsection{Static analysis and tests}
+%    \begin{frame}
+%      \frametitle{Static analysis}
+%      \begin{itemize}
+%        \item Should be part of automated code review
+%        \item Does not test the function of the code (or if can be compiled)
+%        \item Used mainly for checking compliance with code standard
+%        \item Can be used to highlight some problematic code constructs, such as
+%        \begin{itemize}
+%          \item Calls to unsafe functions
+%          \item SQL-statements with undbound variables
+%          \item Possible use of unsafe input
+%          \item Might find potential logical bugs
+%        \end{itemize}
+%      \end{itemize}
+%    \end{frame}
 
-    \begin{frame}
-      \frametitle{Tests}
-      \begin{itemize}
-        \item Should be part of automated code review/build
-        \item Does test the function of the code
-        \item Can be seen as documentation of the code
-        \item Should be mappable against requirements and/or user stories
-        \item There is no difference between normal functional/behavioural tests and security tests!
-      \end{itemize}
-    \end{frame}
+%    \begin{frame}
+%      \frametitle{Tests}
+%      \begin{itemize}
+%        \item Should be part of automated code review/build
+%        \item Does test the function of the code
+%        \item Can be seen as documentation of the code
+%        \item Should be mappable against requirements and/or user stories
+%        \item There is no difference between normal functional/behavioural tests and security tests!
+%      \end{itemize}
+%    \end{frame}
 
-  \subsection{Threat modeling - Crash course}
+  \section{Threat modeling - Crash course}
     \begin{frame}
-      \frametitle{Threat modeling}
+      \frametitle{Threat modeling - Crash course}
       \begin{itemize}
         \item A systematic way to find and analyse possible threats to the system
         \item Can, and should, be done on several levels (i.e. Overall architecture \textrightarrow module/class)
@@ -182,9 +195,12 @@ Cybercom Group AB \\
         \begin{itemize}
           \item DREAD
           \item Binary Risk Analysis (BRA)
+          \item Other system (as long as the threats can be compared)
         \end{itemize}
         \item List countermeasures and mitigations for each threat
       \end{itemize}
+      The ranked list should be used to determine which countermeasures/mitigations
+      to prioritise.
     \end{frame}
 
 \section{Secure Code - Crash course}
