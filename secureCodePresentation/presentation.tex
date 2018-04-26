@@ -178,24 +178,27 @@ Cybercom Group AB \\
       This is just an example of one possible method
       \begin{itemize}
         \item Decompose the application/system into manageable units (from now on \textit{processes})
+        preferrably into a diagram
         \item Focus on one process at a time
         \item Identify the dataflows to and from the process and which resources the flows involve (e.g. a database, a web-gui, filesystem, a user)
         \item Add \textit{trust boundaries} to the diagram
-        \item Look at each dataflow, which passes a trust boundary, in turn and determine which threats is present against that flow (this involves attacks against the untrusted resource)
-        \begin{itemize}
-          \item STRIDE
-          \item OWASP top 10
-        \end{itemize}
       \end{itemize}
     \end{frame}
     \begin{frame}
       \frametitle{Threat modeling - Basic steps, cont.}
       \begin{itemize}
+        \item Look at each dataflow, which passes a trust boundary, in turn and determine which threats is present against that flow (this involves attacks against the untrusted resource)
+        \begin{itemize}
+          \item STRIDE
+          \item OWASP top 10
+          \item CWE
+        \end{itemize}
         \item Rank the found threats, i.e. give it a score
         \begin{itemize}
           \item DREAD
+          \item CVSS
           \item Binary Risk Analysis (BRA)
-          \item Other system (as long as the threats can be compared)
+          \item Other system (as long as the threats can be ranked and compared)
         \end{itemize}
         \item List countermeasures and mitigations for each threat
       \end{itemize}
@@ -224,13 +227,17 @@ Cybercom Group AB \\
     \begin{itemize}
       \item Security specific requirements should be added if missing (e.g. \textit{All passwords must be encrypted})
       \item Create evil user stories (e.g. \textit{As a unauthorised attacker I want access to the user database})
-      \item Each task should be analysed for security implications and how to handle them
+      \item Each task should be analysed for potential threats and how to mitigate them
     \end{itemize}
+    \begin{block}{It's hard to patch security in}
+      When security countermeasures are added as a reaction, there is a risk that the patch itself introduces new threats.
+      Therefore it is vital to think about potential threats and how to mitigate them as early as possible.
+    \end{block}
     \end{frame}
 
   \subsection{Secure code}
     \begin{frame}
-    \frametitle{Requirements, Tasks and User Stories}
+    \frametitle{Secure code}
     \begin{itemize}
     \item
     \end{itemize}
@@ -238,7 +245,15 @@ Cybercom Group AB \\
 
   \subsection{Security tests}
     \begin{frame}
-    \frametitle{Requirements, Tasks and User Stories}
+    \frametitle{Security tests}
+    \begin{itemize}
+    \item
+    \end{itemize}
+    \end{frame}
+
+  \subsection{Static analysis}
+    \begin{frame}
+    \frametitle{Security tests}
     \begin{itemize}
     \item
     \end{itemize}
@@ -246,7 +261,7 @@ Cybercom Group AB \\
 
   \subsection{Security code review}
     \begin{frame}
-    \frametitle{Requirements, Tasks and User Stories}
+    \frametitle{Security code review}
     \begin{itemize}
     \item
     \end{itemize}
