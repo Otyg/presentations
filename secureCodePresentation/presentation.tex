@@ -365,9 +365,19 @@ PreparedStatement pstmt = con.prepareStatement(
     \end{frame}
     \begin{frame}
       \frametitle{Protect data}
+      \begin{itemize}
+        \item Encrypt all data in transit
+        \item Encrypt sensitive data at rest
+        \item Restrict access to data at rest with access controls
+        \item Use functions to wipe transient memory and prevent swapping of sensitive information
+      \end{itemize}
     \end{frame}
     \begin{frame}
       \frametitle{Don't reinvent the wheel}
+      \begin{itemize}
+        \item Use well known 3rd party libraries and frameworks that's actively maintained (especially regarding cryptography)
+        \item Centralise and create internal libraries with common functionality
+      \end{itemize}
     \end{frame}
   \subsection{Tests}
     \begin{frame}
