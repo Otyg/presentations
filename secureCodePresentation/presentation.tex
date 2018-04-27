@@ -327,6 +327,29 @@ PreparedStatement pstmt = con.prepareStatement(
     \end{frame}
     \begin{frame}
       \frametitle{Log wisely}
+      \begin{itemize}
+        \item Use correct log levels (Error, Warn, Info, Debug (, Trace))
+        \item Diffrentiate between diffrent kinds of logs (e.g. Audit, Access, Error, Operation, Debug)
+        \item The logs can act as an attack vector, untrusted input should never be logged without proper encoding
+        \item Protect the logs if they contain sensitive data (as a rule of thumb, this should only happend during debug and development)
+      \end{itemize}
+    \end{frame}
+    \begin{frame}
+      \frametitle{Log wisely}
+      \begin{block}{Use a proper logger}
+        Never use \emph{System.out.println(), printf()} or the like for logging!
+
+        Use a proper logging mechanism with support for diffrent log levels and
+        diffrent log targets.
+      \end{block}
+      \begin{block}{The relation between error messages and error logs}
+        An error message is intended for the end user for information that \emph{something went wrong}.
+
+        The error log is intended for support personnel to see \emph{exactly what went wrong}.
+
+        The error message should contain enough information to map it to an entry in the error log,
+        the actual data to investigate the error should be located to the error log.
+      \end{block}
     \end{frame}
     \begin{frame}
       \frametitle{Control access}
