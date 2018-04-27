@@ -353,6 +353,15 @@ PreparedStatement pstmt = con.prepareStatement(
     \end{frame}
     \begin{frame}
       \frametitle{Control access}
+      \begin{itemize}
+        \item Identify, Authenticate, Authorise
+        \item Protect passwords
+        \item Expire sessions
+        \item All requests must go through access controls
+        \item Deny by default
+        \item Do not hardcode the access control checks, centralise it
+        \item Since all clients should be seen as hostile, access controls must be server side
+      \end{itemize}
     \end{frame}
     \begin{frame}
       \frametitle{Protect data}
