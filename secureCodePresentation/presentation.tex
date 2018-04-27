@@ -317,6 +317,13 @@ PreparedStatement pstmt = con.prepareStatement(
     \end{frame}
     \begin{frame}
       \frametitle{Error and Exceptionhandling}
+      \begin{itemize}
+        \item Expect the unexpected, i.e. all errors and exceptions should be handled
+        \item Report as close to the source as possible
+        \item Handle the error or exception where it make sense, i.e. rethrow to a point where you can recover gracefully
+        \item Try to centralise the handling as much as possible
+        \item Error messages should give enough information to the user about what went wrong, without leaking sensitive information
+      \end{itemize}
     \end{frame}
     \begin{frame}
       \frametitle{Log wisely}
@@ -327,7 +334,9 @@ PreparedStatement pstmt = con.prepareStatement(
     \begin{frame}
       \frametitle{Protect data}
     \end{frame}
-
+    \begin{frame}
+      \frametitle{Don't reinvent the wheel}
+    \end{frame}
   \subsection{Tests}
     \begin{frame}
       \frametitle{Tests}
