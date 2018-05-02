@@ -393,10 +393,14 @@ PreparedStatement pstmt = con.prepareStatement(
 
   \subsection{Static analysis}
     \begin{frame}
-    \frametitle{Static analysis}
-    \begin{itemize}
-    \item
-    \end{itemize}
+      \frametitle{Static analysis}
+      \begin{itemize}
+        \item Add security related rules for the analyser(s)
+        \item Can find and highlight potential dangerous code constructs (e.g. injection vectors)
+        \item Won't find everything
+        \item False positives (i.e. the code is not vulnerable)
+        \item Use more than one tool
+      \end{itemize}
     \end{frame}
 
   \subsection{Code review}
