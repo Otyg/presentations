@@ -380,6 +380,7 @@ PreparedStatement pstmt = con.prepareStatement(
         \item Centralise and create internal libraries with common functionality
       \end{itemize}
     \end{frame}
+
   \subsection{Tests}
     \begin{frame}
       \frametitle{Tests}
@@ -388,6 +389,7 @@ PreparedStatement pstmt = con.prepareStatement(
         \item Security related test cases should be present on all test levels
         \item Create testcases based on the threat model and evil user stories
         \item Make sure there are testcases covering corner cases and error cases
+        \item Test behaviour and functionality, not implementation (i.e. \emph{Given this input, this is the expected output/behaviour})
       \end{itemize}
     \end{frame}
 
@@ -405,10 +407,13 @@ PreparedStatement pstmt = con.prepareStatement(
 
   \subsection{Code review}
     \begin{frame}
-    \frametitle{Code review}
-    \begin{itemize}
-    \item
-    \end{itemize}
+      \frametitle{Code review}
+      \begin{itemize}
+        \item Should be enforced (i.e. pull requests and protected branches in GitHub, gerrit use an enforcing model)
+        \item Comment on code you dont't understand
+        \item Use a checklist (OWASP Code review guide, OWASP Proactive controls, SANS Swat checklist)
+        \item There should be testcases covering changed code and the testcases must test the code
+      \end{itemize}
     \end{frame}
 
 \begin{frame}
@@ -467,7 +472,7 @@ This statement requires citation \cite{p1}.
 %------------------------------------------------
 
 \begin{frame}
-\Huge{\centerline{The End}}
+\Huge{\centerline{Questions?}}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
