@@ -8,6 +8,12 @@ revealOptions:
 ---
 ## Automating security with CI/CD 
 ### Continous hacking 
+---
+## Martin Vesterlund
+* Consultant @ Cybercom
+* Master of Science in computer security
+* Like to break things
+* Work with infrastructure and support for enabling CI/CD and DevOps
 
 ---
 ## CI/CD - quick walkthrough
@@ -52,6 +58,7 @@ Note: * SQL, XSS, Command injection, hardcoded credentials, bad crypto
 Note: * Dependent on language, framework, dependencymanagement and build-system
 * Owasp DependencyCheck and Dependencytrack cover most cases
 * npm Audit
+* Scan docker images: Clair, Anchore, Actuary
 * Or tell developers when there are new versions available as a build check
 * Often easy to fix without any fuzz, can be really hard to measure how critical it is
 ----
@@ -83,9 +90,10 @@ Note: * A proxy that analyses and manipulates the requests passed through it
 * OWASP ZAP
 * BurpSuite
 ----
-## Run your API, E2E and UI-tests through an attack-proxy
+## Run your API-, E2E- and UI-tests through an attack-proxy
 
-Note: * Can provide valuable findings such as insecure cookies
+Note: * BDD-Security
+* Can provide valuable findings such as insecure cookies
 * It will replay the traffic and manipulate the requests and look at the responses
 * If findings from static analysis is exploitable
 * Requires some setup, but the tools does not require any security knowledge
@@ -96,39 +104,58 @@ Note: * Can provide valuable findings such as insecure cookies
 
 Note: * ZAP can be scripted, i.e. results from an penetration test can be added to provide regression testing
 ---
-## But why?
-### Find and fix the low hanging fruit
+## Reporting
+* On change requests (pre-merge)
+* In dedicated platform (post-merge)
+
+Note: * OWASP Defectdojo
+* SonarQube
+* Integrate with issue-tracking and error-reporting
+* Issues that needs planning to fix
+* Provides possibility to analyse trends etc
 ---
-## The setup we run at our customer
+## The full chain
+
+Note: * Pre-merge: static analysis, unit-tests and code-review
+* Post-merge: run integration-tests isolated with attack-proxies
+* Deploy to test-environment: run acceptance and E2E-tests with attack-proxy
+* Deliver to production
+----
+## What if we could test the infrastructure before and after deploy?
 
 ----
-## OWASP Dependency Check & DTR Image Scan
-### Find components with known vulnerabilities
+## Run local configuration checks on the target
+### File permissions, sudo access, installed packages etc.
 
-Note: * We also check for outdated dependencies
-
+Note: * OpenSCAP can be used
+* A lot of tools available, or possible to create own
 ----
-## SonarQube
-### Highlights potential injections etc
+## Run remote tests
+### It's your acceptance-test with some added nastyness
 
-Note: * Can report on pull-request to stop the leak
-
+Note: * GaunTLT + BDD-Security
+* Check open ports
+* Check TLS-configuration
+* Nessus/OpenVAS
 ----
-## OWASP ZAP
-### Use existing API/UI-tests to launch attacks
+## Infrastructure as code
+### Code should be tested and analysed before deploy
 
-Note: * Run through a proxy
-* Scan the requests and reuse them after manipulation
-* Can be used to test vulnerabilities that's hard to find static
-* Can be used to verify static findings
-
+Note: * Do the running configuration differ from the expected?
+* Firewall rules
+* Routing tables
+* Machine settings
+* System monitoring
 ---
-## One step further...
-### Infrastructure as code..?
-
-----
-## Is the deploy target secure?
-### Test the infrastructure before deploying to it
-
+## Thank you
+### martin.vesterlund@cybercom.com
+### [https://www.linkedin.com/in/martin-v-b2a51558](https://www.linkedin.com/in/martin-v-b2a51558)
 ---
-## Thank you 
+## Resources
+* [SonarQube](https://www.sonarqube.org), [SpotBugs](https://spotbugs.github.io/), [find-sec-bugs](https://find-sec-bugs.github.io/), [PumaScan](https://github.com/pumasecurity/puma-scan), [GoSec](https://github.com/securego/gosec)
+* [DependencyCheck](https://github.com/jeremylong/DependencyCheck), [DependencyTrack](https://github.com/DependencyTrack/dependency-track), [npm Audit](https://docs.npmjs.com/cli/audit), [Clair](https://github.com/coreos/clair), [Anchore](https://anchore.com/opensource/), [Actuary](https://github.com/diogomonica/actuary)
+* [OWASP ZAP](https://www.zaproxy.org/), [BurpSuite](https://portswigger.net/burp)
+* [BDD-Security](https://iriusrisk.com/open-source/), [Gauntlt](http://gauntlt.org/)
+* [OpenSCAP](https://www.open-scap.org/tools/), [OpenVAS](http://openvas.org/)
+* [OWASP DefectDojo](https://github.com/DefectDojo/django-DefectDojo)
+
