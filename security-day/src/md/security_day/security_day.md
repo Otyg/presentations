@@ -17,7 +17,7 @@ revealOptions:
 
 ---
 ## CI/CD - quick walkthrough
-Thze bild of thze pipeline
+![](gfx/pipeline.png)
 Note: * Code review (Pull/change-request)
 * Build and (unit-) test change 
 * Delivery: publish built artifacts to repository
