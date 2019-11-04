@@ -1,0 +1,22 @@
+{
+  "name": "build-tools-workshops",
+  "version": "1.0.0",
+  "description": "reveal.js presentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "reveal-md": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ghe.telenordigital.com/TelenorSweden/build-tools-workshops.git"
+  },
+  "author": "Mikael Östberg",
+  "license": "ISC"
+}
