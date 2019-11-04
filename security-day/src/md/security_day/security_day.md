@@ -7,7 +7,7 @@ revealOptions:
 
 ---
 ## Automating security with CI/CD 
-### Continous hacking 
+
 ---
 ## Martin Vesterlund
 * Consultant @ Cybercom
@@ -92,8 +92,7 @@ Note: * A proxy that analyses and manipulates the requests passed through it
 ----
 ## Run your API-, E2E- and UI-tests through an attack-proxy
 
-Note: * BDD-Security
-* Can provide valuable findings such as insecure cookies
+Note: * Can provide valuable findings such as insecure cookies
 * It will replay the traffic and manipulate the requests and look at the responses
 * If findings from static analysis is exploitable
 * Requires some setup, but the tools does not require any security knowledge
@@ -103,6 +102,7 @@ Note: * BDD-Security
 ### Provides regression testing
 
 Note: * ZAP can be scripted, i.e. results from an penetration test can be added to provide regression testing
+* BDD-Security
 ---
 ## Reporting
 * On change requests (pre-merge)
