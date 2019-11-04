@@ -115,7 +115,7 @@ Note: * OWASP Defectdojo
 * Provides possibility to analyse trends etc
 ---
 ## The full chain
-
+![](gfx/fullChain.png)
 Note: * Pre-merge: static analysis, unit-tests and code-review
 * Post-merge: run integration-tests isolated with attack-proxies
 * Deploy to test-environment: run acceptance and E2E-tests with attack-proxy
