@@ -1,14 +1,16 @@
 ---
 title: Automating security with CI/CD - Continous hacking
-theme: moon
-highlight-theme: github
+theme: cybercom.css
+highlight-theme: darcula
 revealOptions:
   transition: 'slide'
 
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Automating security with CI/CD 
 
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Martin Vesterlund
 * Consultant @ Cybercom
 * Master of Science in computer security
@@ -16,6 +18,7 @@ revealOptions:
 * Work with infrastructure and support for enabling CI/CD and DevOps
 
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## CI/CD - quick walkthrough
 ![](gfx/pipeline.png)
 Note: * Code review (Pull/change-request)
@@ -24,16 +27,19 @@ Note: * Code review (Pull/change-request)
 * Deploy: publish built artifacts to running environment
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Built-in security features
 * Audit-trail
 * Immutable artifacts 
 * Repeatable
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Automate the repetative stuff
 ### Like security checks
 
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## But why security tests in CI/CD-pipelines?
 ### Find and fix the low hanging fruit
 
@@ -42,6 +48,7 @@ Note: * Find issues early and fix them early
 * Help the pentesters
 
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Static analysis can find bad patterns
 ### Like injection vectors and use of insecure functions
 
@@ -52,6 +59,7 @@ Note: * SQL, XSS, Command injection, hardcoded credentials, bad crypto
 * SpotBugs, PumaScan, GoSec
 * Can be hard to fix and harder to measure criticality
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## A9/CWE-937: Using Components with Known Vulnerabilities
 ### Use tools to check your dependencies for reported vulnerabilities
 
@@ -62,15 +70,18 @@ Note: * Dependent on language, framework, dependencymanagement and build-system
 * Or tell developers when there are new versions available as a build check
 * Often easy to fix without any fuzz, can be really hard to measure how critical it is
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Marvin-report + SonarQube + Dependency-check picture?
 
 Note: * When faced with this, it's hard to ignore and forget it
 * Requires action and reason to not fix
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Dynamic testing
 ### Security tests is not that hard
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Unit-tests
 ### Test your boundaries and input handling
 
@@ -79,10 +90,12 @@ Note: * Security features are features
 * How does it handle exremely large input
 * Integer overflow/underflow
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## But, you must know how to hack to write security tests
 ### Or do you?
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Most attackers will use attack-proxies
 ### So should you!
 
@@ -90,6 +103,7 @@ Note: * A proxy that analyses and manipulates the requests passed through it
 * OWASP ZAP
 * BurpSuite
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Run your API-, E2E- and UI-tests through an attack-proxy
 
 Note: * Can provide valuable findings such as insecure cookies
@@ -98,12 +112,14 @@ Note: * Can provide valuable findings such as insecure cookies
 * Requires some setup, but the tools does not require any security knowledge
 * You might break things though
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Add testcases from penetrationtests
 ### Provides regression testing
 
 Note: * ZAP can be scripted, i.e. results from an penetration test can be added to provide regression testing
 * BDD-Security
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Reporting
 * On change requests (pre-merge)
 * In dedicated platform (post-merge)
@@ -114,6 +130,7 @@ Note: * OWASP Defectdojo
 * Issues that needs planning to fix
 * Provides possibility to analyse trends etc
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## The full chain
 ![](gfx/fullChain.png)
 Note: * Pre-merge: static analysis, unit-tests and code-review
@@ -121,15 +138,18 @@ Note: * Pre-merge: static analysis, unit-tests and code-review
 * Deploy to test-environment: run acceptance and E2E-tests with attack-proxy
 * Deliver to production
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## What if we could test the infrastructure before and after deploy?
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Run local configuration checks on the target
 ### File permissions, sudo access, installed packages etc.
 
 Note: * OpenSCAP can be used
 * A lot of tools available, or possible to create own
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Run remote tests
 ### It's your acceptance-test with some added nastyness
 
@@ -138,6 +158,7 @@ Note: * GaunTLT + BDD-Security
 * Check TLS-configuration
 * Nessus/OpenVAS
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Infrastructure as code
 ### Code should be tested and analysed before deploy
 
@@ -147,10 +168,12 @@ Note: * Do the running configuration differ from the expected?
 * Machine settings
 * System monitoring
 ---
+<!-- .slide: data-background="./gfx/end_bg.png" -->
 ## Thank you
 ### martin.vesterlund@cybercom.com
 ### [https://www.linkedin.com/in/martin-v-b2a51558](https://www.linkedin.com/in/martin-v-b2a51558)
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Resources
 * [SonarQube](https://www.sonarqube.org), [SpotBugs](https://spotbugs.github.io/), [find-sec-bugs](https://find-sec-bugs.github.io/), [PumaScan](https://github.com/pumasecurity/puma-scan), [GoSec](https://github.com/securego/gosec)
 * [DependencyCheck](https://github.com/jeremylong/DependencyCheck), [DependencyTrack](https://github.com/DependencyTrack/dependency-track), [npm Audit](https://docs.npmjs.com/cli/audit), [Clair](https://github.com/coreos/clair), [Anchore](https://anchore.com/opensource/), [Actuary](https://github.com/diogomonica/actuary)
@@ -158,4 +181,4 @@ Note: * Do the running configuration differ from the expected?
 * [BDD-Security](https://iriusrisk.com/open-source/), [Gauntlt](http://gauntlt.org/)
 * [OpenSCAP](https://www.open-scap.org/tools/), [OpenVAS](http://openvas.org/)
 * [OWASP DefectDojo](https://github.com/DefectDojo/django-DefectDojo)
-
+* [OWASP ASVS](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project), [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project)
