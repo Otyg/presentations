@@ -121,17 +121,6 @@ Note: * ZAP can be scripted, i.e. results from an penetration test can be added 
 * BDD-Security
 ---
 <!-- .slide: data-background="./gfx/front_bg.png" -->
-## Reporting
-* On change requests (pre-merge)
-* In dedicated platform (post-merge)
-
-Note: * OWASP Defectdojo
-* SonarQube
-* Integrate with issue-tracking and error-reporting
-* Issues that needs planning to fix
-* Provides possibility to analyse trends etc
----
-<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## The full chain
 ![](gfx/fullChain.png)
 Note: * Pre-merge: static analysis, unit-tests and code-review
