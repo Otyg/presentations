@@ -168,6 +168,18 @@ Note: * Do the running configuration differ from the expected?
 * Routing tables
 * Machine settings
 * System monitoring
+----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
+## Reporting
+### On change requests (pre-merge)
+### and in dedicated platform (post-merge)
+
+Note: * OWASP Defectdojo
+* SonarQube
+* Integrate with issue-tracking and error-reporting
+* Issues that needs planning to fix
+* Provides possibility to analyse trends etc
+
 ---
 <!-- .slide: data-background="./gfx/end_bg.png" -->
 ## Thank you
