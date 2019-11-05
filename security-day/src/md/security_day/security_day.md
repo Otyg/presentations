@@ -89,6 +89,7 @@ Note: * Security features are features
 * How does the code handle certain input
 * How does it handle exremely large input
 * Integer overflow/underflow
+* OWASP Testing Guide and Application Security Verification Standard
 ----
 <!-- .slide: data-background="./gfx/front_bg.png" -->
 ## But, you must know how to hack to write security tests
