@@ -1,6 +1,6 @@
 ---
 title: Automating security with CI/CD - Continous hacking
-theme: cybercom.css
+theme: moon 
 highlight-theme: darcula
 revealOptions:
   transition: 'slide'
