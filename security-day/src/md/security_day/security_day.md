@@ -169,9 +169,11 @@ Note: * OWASP Defectdojo
 * Issues that needs planning to fix
 * Provides possibility to analyse trends etc
 ---
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## How do we make the developers use this?
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## We sneak it in...
 ```groovy
 library 'stable'
@@ -195,6 +197,7 @@ Note: * These steps expands into various actions like dependency-check, sonar-an
 * Since we control the shared library we can add and change the steps
 
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## And suddenly it looks like this
 ![](gfx/pipeline-real.png)
 
