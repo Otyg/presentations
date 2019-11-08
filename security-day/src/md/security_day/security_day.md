@@ -168,6 +168,35 @@ Note: * OWASP Defectdojo
 * Integrate with issue-tracking and error-reporting
 * Issues that needs planning to fix
 * Provides possibility to analyse trends etc
+---
+## How do we make the developers use this?
+
+----
+## We sneak it in...
+```groovy
+library 'stable'
+pipeline {
+//...
+  stage('Persisted Static Analysis') {
+    steps {
+      runPersistedSonarAnalysis()
+    }
+  }
+  stage('PullRequest static Analysis') {
+    steps {
+      pullRequestStaticAnalysisChecks()
+    }
+  }
+//...
+}
+```
+
+Note: * These steps expands into various actions like dependency-check, sonar-analysis and reporting
+* Since we control the shared library we can add and change the steps
+
+----
+## And suddenly it looks like this
+![](gfx/pipeline-real.png)
 
 ---
 <!-- .slide: data-background="./gfx/end_bg.png" -->
