@@ -71,8 +71,8 @@ Note: * Dependent on language, framework, dependencymanagement and build-system
 * Often easy to fix without any fuzz, can be really hard to measure how critical it is
 ----
 <!-- .slide: data-background="./gfx/front_bg.png" -->
-## Marvin-report + SonarQube + Dependency-check picture?
-
+## It's hard to ignore 
+![](gfx/marvin.png)
 Note: * When faced with this, it's hard to ignore and forget it
 * Requires action and reason to not fix
 ---
