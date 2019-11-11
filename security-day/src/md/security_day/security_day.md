@@ -202,6 +202,7 @@ Note: * These steps expands into various actions like dependency-check, sonar-an
 Note: * When faced with this, it's hard to ignore and forget it
 * Requires action and reason to not fix
 ----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
 ## And management get graphs
 ![](gfx/defectdojo.png)
 ---
