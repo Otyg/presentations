@@ -69,12 +69,6 @@ Note: * Dependent on language, framework, dependencymanagement and build-system
 * Scan docker images: Clair, Anchore, Actuary
 * Or tell developers when there are new versions available as a build check
 * Often easy to fix without any fuzz, can be really hard to measure how critical it is
-----
-<!-- .slide: data-background="./gfx/front_bg.png" -->
-## It's hard to ignore 
-![](gfx/marvin.png)
-Note: * When faced with this, it's hard to ignore and forget it
-* Requires action and reason to not fix
 ---
 <!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Dynamic testing
@@ -200,6 +194,13 @@ Note: * These steps expands into various actions like dependency-check, sonar-an
 <!-- .slide: data-background="./gfx/front_bg.png" -->
 ## And suddenly it looks like this
 ![](gfx/pipeline-real.png)
+
+----
+<!-- .slide: data-background="./gfx/front_bg.png" -->
+## It's hard to ignore 
+![](gfx/marvin.png)
+Note: * When faced with this, it's hard to ignore and forget it
+* Requires action and reason to not fix
 
 ---
 <!-- .slide: data-background="./gfx/end_bg.png" -->
