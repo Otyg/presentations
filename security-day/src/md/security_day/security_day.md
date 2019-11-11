@@ -201,7 +201,9 @@ Note: * These steps expands into various actions like dependency-check, sonar-an
 ![](gfx/marvin.png)
 Note: * When faced with this, it's hard to ignore and forget it
 * Requires action and reason to not fix
-
+----
+## And management get graphs
+![](gfx/defectdojo.png)
 ---
 <!-- .slide: data-background="./gfx/end_bg.png" -->
 ## Thank you
