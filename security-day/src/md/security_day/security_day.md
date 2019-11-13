@@ -210,6 +210,7 @@ Note: * When faced with this, it's hard to ignore and forget it
 ## Thank you
 ### martin.vesterlund@cybercom.com
 ### [https://www.linkedin.com/in/martin-v-b2a51558](https://www.linkedin.com/in/martin-v-b2a51558)
+### [https://otyg.github.io/presentations/security-day/index.html#/](https://otyg.github.io/presentations/security-day/index.html#/)
 ---
 <!-- .slide: data-background="./gfx/front_bg.png" -->
 ## Resources
